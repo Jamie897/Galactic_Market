@@ -6,7 +6,7 @@ const port = process.env.PORT || 4000;
 require("dotenv").config({ path: "../.env" });
 
 // Import the filter route from the routes directory
-const filterRouter = require("./routes/filter");
+const filterRouter = require("./api/routes/filter");
 
 // Middlewares
 app.use(express.json());
