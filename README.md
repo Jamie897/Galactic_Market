@@ -1,10 +1,8 @@
-```markdown
-# Galactic Market
+# Galactic Market Paint project
 
 ## Description
 
 # Installation and Setup
-
 ## Install Node.js
 - Download the installer from the official website: https://nodejs.org/en/download/
 
@@ -12,11 +10,9 @@
 - Download the installer from GitHub: https://github.com/nvm-sh/nvm
 - Follow the installation instructions on the GitHub page.
 
-# Setup Database
-
+# Setup database
 ## Install PostgreSQL:
-***Note: The installation process varies depending on the operating system.***
-
+*** Note: The installation process varies depending on the operating system.
 #### For Windows:
 Download the installer from the official website: https://www.postgresql.org/download/windows/
 
@@ -62,22 +58,19 @@ nvm use
 ```
 npm install
 ```
-
 # Set Up the Database:
-
 ## Step 1: Navigate to the Database Script Directory
 - Change to the directory containing your database scripts:
 ```
 cd db
 ```
-
 ## Step 2: Run the User and Database Creation Script
 - Run the following command to create the database and user:
 ```
 psql -U postgres -f create_user_and_db.sql
 ```
-***Note: If you are using a different user than the default, replace `postgres` with your username.***
-You will be prompted to enter your password. Enter the password you created during the installation process. `sudo` might be required to run this command.
+*** Note: If you are using a different user than the default, replace postgres with your username.
+You will be prompted to enter your password. Enter the password you created during the installation process. Sudo might be required to run this command.
 
 ### For Mac users who installed PostgreSQL with Homebrew
 Homebrew usually configures PostgreSQL to use the active OS user as the default database user.
@@ -94,7 +87,6 @@ psql -U <super_user_name> -d postgres -f create_user_and_db.sql
 ```
 psql -U test_user -d test_db -f create_tables.sql
 ```
-
 ## Step 4: Verify the Setup
 - Log in to the database to verify the tables:
 ```
@@ -109,16 +101,15 @@ psql -U test_user -d test_db
               List of relations
  Schema |       Name        | Type  |  Owner
 --------+-------------------+-------+----------
- public | paintings         | table | test_user
- (1 row)
+    public | paintings | table | test_user
+    (1 rows)
 ```
 - Exit the database:
 ```
 \q
 ```
-
 ## Step 5: Convert CSV Data to JSON
-- In the `db` folder run the following command to convert the CSV data to JSON:
+- In the db folder run the following command to convert the CSV data to JSON:
 ```
 node convert-csv-to-json.js
 ```
@@ -126,11 +117,11 @@ node convert-csv-to-json.js
 ```
 JSON file created
 ```
-You can view the JSON file in the `data` directory. File name: `data.json`.
+You can view the JSON file in the data directory. File name: data.json.
 
 ## Step 6: Make your own .env file
-- Create a `.env` file in the root directory of the project.
-- Add the following environment variables to the `.env` file:
+- Create a .env file in the root directory of the project.
+- Add the following environment variables to the .env file:
 ```
 DB_HOST=localhost
 DB_DATABASE=test_db
@@ -139,8 +130,8 @@ DB_PASS=test1234
 DB_PORT=5432
 DB_URL="postgresql://$DB_USER:$DB_PASS@$DB_HOST:$DB_PORT/$DB_DATABASE"
 ```
-- Replace `localhost` with the hostname of your database server.
-- PORT `5432` is the default port for PostgreSQL. If you are using a different port, replace `5432` with your port number.
+- Replace localhost with the hostname of your database server.
+- PORT 5432 is the default port for PostgreSQL. If you are using a different port, replace 5432 with your port number.
 - Save the file.
 
 ## Step 7: Load the JSON Data into the Database
@@ -152,7 +143,7 @@ node load-data.js
 ```
 All paintings have been inserted
 ```
-- You can also view the data in the database using the `psql` command:
+- You can also view the data in the database using the psql command:
 ```
 psql -U test_user -d test_db
 ```
@@ -164,10 +155,8 @@ SELECT * FROM paintings;
 ```
 \q
 ```
-
 ### Troubleshooting
 - If you encounter issues during installation or setup, consult the PostgreSQL documentation or relevant community forums for assistance.
-
 # Run the Application
 - Open a terminal and navigate to the project directory.
 - Change to the React app directory:
@@ -179,7 +168,6 @@ cd hlg-site
 npm start
 ```
 - Open your browser and navigate to http://localhost:3000.
-
 # Run Express Server
 - Open a second terminal and navigate to the project directory.
 - Change to the api directory:
@@ -190,7 +178,6 @@ cd api
 ```
 nodemon server.js
 ```
-
 # Contributors
 [![My Skills](https://skillicons.dev/icons?i=github,js,nodejs,css,express,postgres,react,firebase,vscode,figma)](https://skillicons.dev)
 - [Jamie Toman](https://github.com/Jamie897) (Project Manager, back-end, front-end)
