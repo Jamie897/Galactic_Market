@@ -1,0 +1,37 @@
+/* COLOR SWATCHES STYLESHEET */
+
+.color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(5 * (30px + 4px)); /* Adjust if needed based on actual number of swatches */
+  }
+  
+  .color-swatch {
+    margin: 2px; /* Adjust margin as needed */
+    flex: 0 0 30px; /* Do not grow or shrink, set basis to 30px */
+    cursor: pointer;
+  }
+  
+  button.color-swatch {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .color-bg {
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically (if needed) */
+    background-color: rgba(74, 90, 127, 0.5);
+    border-radius: 5px;
+  }
+  
+  .color-swatch.selected {
+    border: 2px solid #fff; /* This will add a white border to selected swatches */
+  }
+  
