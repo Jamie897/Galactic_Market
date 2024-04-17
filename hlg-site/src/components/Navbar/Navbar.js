@@ -14,7 +14,7 @@ const Navbar = ({ currentUser, handleShowSignUp, handleShowLogin, isAuthStatusKn
     <>
       <nav style={{ backgroundColor: '#303A52' }}>
         <div className="nav-wrapper container">
-          <span className="brand-logo">Happy Little Galaxies</span>
+          <span className="brand-logo">Galactic Market</span>
           <a href="!#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
