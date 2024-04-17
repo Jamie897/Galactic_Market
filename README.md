@@ -3,6 +3,7 @@
 ## Description
 
 # Installation and Setup
+
 ## Install Node.js
 - Download the installer from the official website: https://nodejs.org/en/download/
 
@@ -13,6 +14,7 @@
 # Setup database
 ## Install PostgreSQL:
 *** Note: The installation process varies depending on the operating system.
+
 #### For Windows:
 Download the installer from the official website: https://www.postgresql.org/download/windows/
 
