@@ -27,7 +27,7 @@ const usePaintings = () => {
           `http://localhost:4000/filter?${queryString}`
         );
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Network response error"); //changed to error from was not ok
         }
         const data = await response.json();
         setPaintings(data);
