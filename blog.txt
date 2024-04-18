@@ -1,5 +1,3 @@
-Here's a focused blog post on the back-end components and API of the Galactic Market project, keeping in mind the stipulations provided:
-
 # Building the Cosmic API: The Back-end Journey of Galactic Market
 
 At the heart of our Galactic Market web application lies a robust and scalable back-end architecture, meticulously designed to handle the complexities of our celestial art platform. In this blog post, we'll delve into the intricate details of our back-end development process, highlighting the technologies and components that power our cosmic API.
